@@ -1,0 +1,75 @@
+/*styling.css*/
+body .Error{
+  scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+  * {
+    box-sizing: border-box;
+  }
+  
+   .body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+  } /*/
+  /*Jumbotron*/
+  .jumbotron {
+    background-color: transparent;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  .jumbotron h1 {
+    letter-spacing: 2.5px;
+    font-size: 3.5em;
+  }
+  
+  .jumbotron h1,
+  .jumbotron p {
+    text-align: center;
+  }
+  
+/*map*/
+#googleMap {
+  width: 80%;
+  height: 400px;
+  margin: 10px auto;
+}
+/*output box*/
+#output {
+  text-align: center;
+  font-size: 2em;
+  margin: 20px auto;
+}
+
+#mode {
+  color: black;
+}
+  
+  .counter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 30px 50px;
+  }
+  
+  .counter {
+    margin-top: 10px;
+  }
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  @media (max-width: 580px) {
+    body {
+      flex-direction: column;
+    }
+  }

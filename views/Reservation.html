@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Reservation || Nox Transport</title>
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" href="../css/materialize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../App.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+
+<!--top nav-->
+
+<body onload="initialize()">
+    <nav class="z-depth-0 bg-dark ">
+        <div class="nav-wrapper container">
+            <a href="/" class="text-decoration-none text-light"><Kbd>NOX</Kbd> Transport</a>
+            <span class="right grey-text text-darken-1">
+                <i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
+            </span>
+        </div>
+    </nav>
+
+    <!--side nav (menu)-->
+
+    <ul id="side-menu" class="sidenav side-menu ">
+        <li><a class="subheader">SET RESERVATION</a></li>
+        <li><a href="/" class="waves-effect">
+                <i class="material-icons">account_circle</i>users</a>
+        </li>
+        <li><a href="/" class="waves-effect">
+                <i class="material-icons">assignment</i>Courses</a>
+        </li>
+        <li><a href="contact.html" class="waves-effect">
+                <i class="material-icons">contacts</i>Contacts</a>
+        </li>
+        <li><a href="/" class="waves-effect" id="logout">
+            <i class="material-icons">settings_power</i>Logout</a>
+          </li>
+    </ul>
+    <!--user list-->
+    <div class="users container grey-text text-darken-1">
+        <h6>Request List</h6>
+                       
+    </div>
+
+    <!--add user button-->
+    <div class="center">
+        <a class="btn-floating btn-small add-btn sidenav-trigger" data-target="side-form">
+            <i class="material-icons">add</i>
+        </a>
+    </div>
+        <!--MAP Area-->
+        <div class="container-fluid text-center">
+                <div id="googleMap"></div>
+                <p><button class="btn btn-primary " onclick="getLocation()">Get My Location</button></p>
+            
+                <p id="demo"></p>
+                <div class="container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <th>Country</th>
+                            <th>State</th>
+                            <th>City</th>
+                            </tr>
+                        </thead>
+                        <tbody id="body"></tbody>
+                    </table>
+                  </div>
+                </div>
+        </div>
+    <!--add new request form-->
+    <div id="side-form" class="sidenav side-form">
+        <form class="add-user container section">
+            <h6>Post request</h6>
+            <div class="divider"></div>
+            <div class="input-field">
+                <input placeholder="e.g. John Doe" id="name" type="text" class="validate">
+                <label for="name">user Name</label>
+            </div>
+            <div class="input-field">
+                <input placeholder="e.g. 693972665" id="id" type="text" class="validate" >
+                <label for="id">phone number</label>
+            </div>
+            <div class="form-group container">
+                <input type="text" id="searchTextField" class="form-control validate" />
+                <label for="location">Enter Location: (Autocomplete)</label>
+              </div>
+            <br>
+            <div class="input-field center">
+                <button class="btn-small">Lunch request</button>
+            </div>
+        </form>
+    </div>
+    <!--FOOTER-->
+<div class="jumbotron text-center " style=" background-color: #343a40!important;">
+    <p >© NOX Transport. All rights reserved.</p>
+    <ul class="footer__nav ">
+      <a href="#" class="p-3 text-secondary">Home</a>
+      <a href="./App.html"  class="p-3 text-secondary">Map</a>
+      <a href="./services.html" class="p-3 text-secondary">Services</a>
+     <a href="./Error.html"  class="p-3 text-secondary">Reservation</a>
+    </ul>
+  </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-firestore.js"></script>
+
+    <!-- Google map api key script -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw7ghdAAuXvukSBSqpc3WrdxGFhmhcfP4&libraries=places"></script>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+    apiKey: "AIzaSyBCeGYoM3vpHxDHVbx1olhkN1ijn6nBYfA",
+    authDomain: "nox-transport.firebaseapp.com",
+    projectId: "nox-transport",
+    storageBucket: "nox-transport.appspot.com",
+    messagingSenderId: "310799850166",
+    appId: "1:310799850166:web:d8f87bd430c7fae050a417"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    </script>
+    <script src="../js/Map.js"></script>  
+    <script src="../js/materialize.min.js"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/db.js"></script>
+    <script src="../js/Reservation.js"></script>
+    <script src="../js/oop.js"></script>
+</body>
+</html>

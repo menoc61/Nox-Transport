@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <title>Get started || Nox Transport</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" href="../css/materialize.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+</head>
+
+<!--top nav--> 
+
+<body class="grey lighten-4">
+  <nav class="z-depth-0 bg-dark">
+    <div class="nav-wrapper container">
+      <a href="/"><Kbd>NOX</Kbd> Transport</a>
+    </div>
+  </nav>
+  <!-- end of top nav -->
+
+
+  <!-- login page form -->
+  <div class="users container grey-text text-darken-1">
+    <form class="add-user container section" id="login-form">
+      <h6>User Login</h6>
+      <div class="divider"></div>
+      </br></br>
+      <div class="input-field">
+        <input placeholder="Enter Email Address" id="login-email" type="email" class="validate" required>
+        <label for="email"><i class="material-icons left">person_outline</i>Email Address</label>
+      </div>
+      <div class="input-field">
+        <input placeholder="Enter Password" id="login-password" type="password" class="validate" autocomplete="off" required>
+        <label for="pass"><i class="material-icons left">lock_outline</i>Password</label>
+      </div>
+      <a href="/" class="waves-effect">
+        <p>Forget Your Password?</p>
+      </a>
+      </br>
+      <a href="/" class="waves-effect sidenav-trigger" data-target="side-form">
+        <p>New user sign up</p>
+      </a>
+      </br>
+      <div class="input-field center">
+        <button class="btn-small" type="submit" id="btnLogin">Login</button>
+      </div>
+    </form>
+    <div class="input-field">
+      <a href="/">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i> Back to Home page.
+      </a>
+    </div>
+  </div>
+  <!-- end of login page form -->
+
+  <!-- new user registration side nav -->
+  <div id="side-form" class="sidenav side-form">
+    <form class="add-user container section" id="signup-form">
+      <h6>New User Registration</h6>
+      <div class="divider"></div>
+
+      <div class="input-field">
+        <input placeholder="Enter Email Address" id="email" type="text" class="validate" autocomplete="off" required>
+        <label for="email">Email Address</label>
+      </div>
+
+      <div class="input-field">
+        <input placeholder="Enter Password" id="pass1" type="password" class="validate" autocomplete="off required">
+        <label for="pass1">Create Password</label>
+      </div>
+
+      <div class="input-field">
+        <input placeholder="phone number" id="tel" type="tel" class="validate"  required>
+        <label for="pass1">Phone number</label>
+      </div>
+
+      <div class="input-field center">
+        <button class="btn-small" type="submit">Create Account</button>
+      </div>
+    </form>
+
+  </div>
+  <!-- end of new user registration side nav -->
+<!--FOOTER-->
+<div class="jumbotron text-center mt-0 bg-secondary fixed-bottom" style="margin-bottom:0; background: transparent;">
+  <p >© NOX Transport. All rights reserved.</p>
+  <ul class="footer__nav ">
+    <a href="../index.html" class="p-3 text-dark">Home</a>
+    <a href="./App.html"  class="p-3 text-dark">Map</a>
+    <a href="./services.html" class="p-3 text-dark">Services</a>
+    <a href="./Reservation.html"  class="p-3 text-dark">Reservation</a>
+  </ul>
+</div>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+
+
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+  apiKey: "AIzaSyBCeGYoM3vpHxDHVbx1olhkN1ijn6nBYfA",
+  authDomain: "nox-transport.firebaseapp.com",
+  projectId: "nox-transport",
+  storageBucket: "nox-transport.appspot.com",
+  messagingSenderId: "310799850166",
+  appId: "1:310799850166:web:d8f87bd430c7fae050a417"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+</script>
+
+  <script type="text/javascript" src="../js/materialize.min.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/ui.js"></script>
+</body>
+</html>
